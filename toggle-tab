@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .tabs{
+    list-style:none;
+	padding:0;
+  }
+  .tabs>li{
+    float:left;
+  }
+  .tabs>li>a{
+    text-decoration:none;
+	padding:6px 12px;
+	color:#000;
+  }
+ </style>
+ </head>
+ <body>
+  <ul class="tabs">
+  	<li><a data-toggle="tab" href="#">10元套餐</a></li>
+  	<li><a data-toggle="tab" href="#">20元套餐</a></li>
+  	<li><a data-toggle="tab" href="#">30元套餐</a></li>
+  </ul>
+  <script src="jquery-1.11.3.js"></script>
+  <script>
+    $(".tabs [data-toggle='tab']")
+	   .css("border-bottom","1px solid #aaa")
+	   .click(function(){
+	     $(".tabs [data-toggle='tab']").css({
+		   border:"none",
+		   borderBottom:"1px solid #aaa"
+		 })
+		 $(this).css({
+	       border:"1px solid #aaa",
+	       borderBottom:"none"	   
+		 })
+	   })
+	$(".tabs [data-toggle='tab']:first").css({
+	  border:"1px solid #aaa",
+	  borderBottom:"none"
+	})
+  </script>
+ </body>
+</html>
