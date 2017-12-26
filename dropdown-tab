@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>...</title>
+  <style>
+    a{
+	  text-decoration:none;
+	  color:#000;
+	}
+	.dropdown{
+	  position:relative;
+	}
+	.dropdown>[data-trigger="dropdown"]{
+	  padding:6px 10px;
+	  border:1px solid #aaa;
+	  border-radius:6px;
+	}
+	.dropdown-menu{
+	  list-style:none;
+	  margin:o;
+	  padding:0;
+	  border:1px solid #aaa;
+	  position:absolute;
+	  top:30px;
+	  height:0;
+	  opacity:0;
+	  overflow:hidden;
+	  transition:all 0.5s linear;
+	}
+	.dropdown>.in{
+	  height:90px;
+	  opacity:1;
+	}
+  </style>
+ </head>
+  
+ <body>
+  <div class="dropdown">
+    <a data-trigger="dropdown" href="#">Dropdown</a>
+    <ul class="dropdown-menu">
+	    <li><a>Action</a></li>
+      <li><a>Another action</a></li>
+      <li><a>Something else here</a></li>
+	    <li><hr></li>
+      <li><a>Separated link</a></li>
+    </ul>
+  </div>
+  <script src="jquery-1.11.3.js"></script>
+  <script>
+    $(".dropdown>[data-trigger='dropdown']").click(
+	  function(){
+	    $(".dropdown>.dropdown-menu").toggleClass("in")
+	 }
+	)
+  </script>
+ </body>
+</html>
