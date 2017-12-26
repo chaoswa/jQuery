@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+    table{
+	  border-collapse:collapse;
+	  width:100%;
+	}
+	table th,table td{
+	  padding:6px 10px;
+	  text-align:center;
+	}
+  </style>
+ </head>
+ <body>
+   <table>
+   	<thead>
+   		<tr>
+   			<th>#</th>
+   			<th>Firsr Name</th>
+   			<th>Last Name</th>
+   			<th>Username</th>
+   		</tr>
+   	</thead>
+   	<tbody>
+   		<tr>
+   			<td>1</td>
+   			<td>的</td>
+   			<td>分</td>
+   			<td>淡淡的</td>
+   		</tr>
+   		<tr>
+   			<td>2</td>
+   			<td>好</td>
+   			<td>额</td>
+   			<td>哈哈哈</td>
+   		</tr>
+   		<tr>
+   			<td>3</td>
+   			<td>额</td>
+   			<td>哦</td>
+   			<td>开头的</td>
+   		</tr>
+   	</tbody>
+   </table>
+   <script src="jquery-1.11.3.js"></script>
+   <script>
+     $("table th").css("borderBottom","2px solid #aaa");
+	 $("table>tbody>tr:gt(0)>td").css("borderTop","1px solid #aaa");
+	 $("table>tbody>tr:even").css("background","#afa")
+   </script>
+ </body>
+</html>
