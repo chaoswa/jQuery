@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+  <style>
+    .accordion>.title{
+	  padding:6px;
+	  border:1px solid #aaa;
+	  background:#eee;
+	  font-size:1.5em;
+	  font-weight:bold;
+	  cursor:pointer;
+	}
+	.title.active{
+	  background:#afa;
+	}
+	.accordion>.content{
+      border:1px solid #aaa;
+	  height:0px;
+	  overflow:hidden;
+	  transition:height 0.5s linear;
+	}
+	.content.active{
+	  height:150px;
+	  padding:6px;
+	}
+  </style>
+ </head>
+ <body>
+	<h1>使用“高度动画”实现“手风琴”组件</h1>
+	<div class="accordion">
+		<div class="title active" data-toggle="title">西游记简介</div>
+		<div class="content active">一个和尚和四个动物的故事</div>
+		<div class="title" data-toggle="title">水浒传简介</div>
+		<div class="content">105个男人和3个女人的故事</div>
+		<div class="title" data-toggle="title">红楼梦简介</div>
+		<div class="content">一个男人和一堆女人的故事</div>
+	</div>
+	<script src="jquery-1.11.3.js"></script>
+	<script>
+	  $(".accordion").on("click","[data-toggle='title']",
+	    function(){
+	      if(!$(this).hasClass("active")){
+		     $(this).addClass("active")
+			        .next().addClass("active")
+		            .siblings(".content.active")
+		             .removeClass("active")
+					.prev()
+					 .removeClass("active")            
+		  }
+      })
+	</script>
+ </body>
+</html>
